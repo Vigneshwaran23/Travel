@@ -1,0 +1,153 @@
+
+<!-- Header -->
+<div class="header">
+  <div>Book now to get exciting travel deals. Upto 40% off on credit card payments<br>
+    offer ends in 
+    <app-count-down></app-count-down>
+  </div>
+  
+</div>
+
+<div class="navigation">
+  <!-- Routes -->
+  <nav>
+    <ul>
+    <li><a routerLink = "/weather" routerLinkActive="active">Weather</a></li>
+    <li><a routerLink = "/destinations" routerLinkActive="active">Destinations</a></li>
+    <li><a routerLink = "/getaquote" routerLinkActive="active">Get a Quote</a></li>
+  </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+<div class="flex-container">
+  <div class ="contentimg"><img src ="\assets\travelbag.png" ></div>
+  <div class="content"><div>Life is short <br> and world is wide!</div>
+  <div class="content-sub">Stay at the comfort of your homes and book a trip to travel<br> after the post pandemic era</div>
+  <button class="button"> PLAN A TRIP</button>
+</div>
+</div>
+  <!-- Weather -->
+  <div class="weather">
+  <h2>Weather Channel</h2></div>
+  <div class="channel-container">
+  <div *ngFor ="let result of data.result">
+    <div class="cname">{{result.city}}</div>
+    <div><i class="fa fa-cloud"></i></div>
+    <div class="temp">{{result.temp_Celsius}}&#176;</div>
+  </div>
+</div>
+<!-- Destinations -->
+<div class="destination">
+  <h2>Featured Destinations</h2></div>
+  <!-- <div class="destination-container">
+  <div *ngFor ="let result of response.result">
+    <div class="cname1">{{result.city}}</div>
+    <div class="imgurl">{{result.imageUrl}}
+     <img src ="{{result.imageUrl}}"></img>
+  </div>
+</div> -->
+
+<div class="promo-image">
+  <img src ="\assets\promo-image.png" >
+  <div class="bottom-left"><h1>PLAN A TRIP</h1>
+  <h2>Make your vacation <br> the most memorable one</h2></div>
+</div>
+
+
+  <!-- Form -->
+  <div class="container">
+    <h1>Travelling as a group? Get a Quote</h1>
+    <hr>
+
+    <label for="name"><b>Your Name</b></label>
+    <input type="text" name="email" id="name" required>
+
+    <label for="Telno"><b>Contact No</b></label>
+    <input type="number" maxlength="10" name="psw" pattern="\d*" id="tno" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" name="email" id="email" required>
+    <hr>
+    <button type="submit" class="registerbtn">Submit</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Trip Zone</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">About</a>
+          </li>
+  
+          <li>
+            <a href="#">Awards</a>
+          </li>
+              
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">Feedback</a>
+          </li>
+        </ul>
+		</li>
+      
+      <li class="nav__item">
+        <h2 class="nav__title">Main Offices</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#">The united states</a>
+          </li>
+          
+          <li>
+            <a href="#">India</a>
+          </li>
+          
+          <li>
+            <a href="#">Brazil</a>
+          </li>
+          
+          <li>
+            <a href="#">Canada</a>
+          </li>
+        </ul>
+		</li>
+
+        <li class="nav__item">
+          <h2 class="nav__title">Sub Offices</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Australia</a>
+            </li>
+            
+            <li>
+              <a href="#">England</a>
+            </li>
+            
+            <li>
+              <a href="#">Germany</a>
+            </li>
+            
+            <li>
+              <a href="#">Canada</a>
+            </li>
+          </ul> 
+		</li>		  
+          <li class="nav__item">
+            <h2 class="nav__title">Disclaimer</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <p>This layout is created as part of Sirus UI Requirements.
+                  All the above content has no direct relation with Sirus
+                  business</p>
+              </li>
+            </ul>
+		  </li>
+</ul>
+    </footer>
